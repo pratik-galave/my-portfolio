@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-on-secondary-fixed-variant: #454747;
+  --color-surface-tint: #5e5e5e;
+  --color-on-tertiary: #ffffff;
+  --color-primary-container: #1b1b1b;
+  --color-on-primary-fixed-variant: #474747;
+  --color-on-primary-container: #848484;
+  --color-surface: #fbf9f9;
+  --color-on-primary-fixed: #1b1b1b;
+  --color-on-surface: #1b1c1c;
+  --color-surface-container: #efeded;
+  --color-inverse-surface: #303031;
+  --color-secondary-fixed-dim: #c6c6c7;
+  --color-secondary-container: #dfe0e0;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-surface-container-lowest: #ffffff;
+  --color-inverse-on-surface: #f2f0f0;
+  --color-on-tertiary-fixed: #1a1c1c;
+  --color-on-error-container: #93000a;
+  --color-tertiary-container: #1a1c1c;
+  --color-on-background: #1b1c1c;
+  --color-tertiary-fixed: #e2e2e2;
+  --color-on-tertiary-container: #838484;
+  --color-secondary-fixed: #e2e2e2;
+  --color-on-secondary-fixed: #1a1c1c;
+  --color-background: #fbf9f9;
+  --color-secondary: #5d5f5f;
+  --color-outline: #7e7576;
+  --color-tertiary: #000000;
+  --color-primary: #000000;
+  --color-on-surface-variant: #4c4546;
+  --color-tertiary-fixed-dim: #c6c6c7;
+  --color-surface-container-low: #f5f3f3;
+  --color-primary-fixed: #e2e2e2;
+  --color-surface-bright: #fbf9f9;
+  --color-primary-fixed-dim: #c6c6c6;
+  --color-surface-container-highest: #e3e2e2;
+  --color-on-secondary-container: #616363;
+  --color-on-secondary: #ffffff;
+  --color-on-error: #ffffff;
+  --color-on-tertiary-fixed-variant: #454747;
+  --color-on-primary: #ffffff;
+  --color-outline-variant: #cfc4c5;
+  --color-surface-container-high: #e9e8e7;
+  --color-surface-variant: #e3e2e2;
+  --color-surface-dim: #dbdad9;
+  --color-inverse-primary: #c6c6c6;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --spacing-stack-lg: 2rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-stack-md: 1rem;
+  --spacing-margin-page: 4rem;
+  --spacing-stack-sm: 0.5rem;
+  --spacing-section-gap: 8rem;
+
+  --font-headline-xl: "Space Grotesk", sans-serif;
+  --font-label-code: "JetBrains Mono", monospace;
+  --font-body-md: "Hanken Grotesk", sans-serif;
+  --font-headline-md: "Space Grotesk", sans-serif;
+  --font-body-lg: "Hanken Grotesk", sans-serif;
+  --font-headline-lg: "Space Grotesk", sans-serif;
+  --font-headline-lg-mobile: "Space Grotesk", sans-serif;
+
+  --font-pixel: "Press Start 2P", cursive;
+  --font-inter: "Inter", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-on-background);
+}
+
+.tech-marquee {
+  display: flex;
+  overflow: hidden;
+  background: #111;
+  padding: 1rem 0;
+  white-space: nowrap;
+}
+.tech-marquee-content {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.tech-icon {
+  color: #888;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  transition: color 0.3s;
+}
+.tech-icon:hover { color: #fff; }
+
+.hanging-sign {
+  position: relative;
+  display: inline-block;
+}
+.hanging-sign::before, .hanging-sign::after {
+  content: '';
+  position: absolute;
+  top: -60px;
+  width: 2px;
+  height: 60px;
+  background-color: #fff;
+}
+.hanging-sign::before { left: 10%; }
+.hanging-sign::after { right: 10%; }
+
+.skill-hex {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+.skill-hex:hover { transform: translateY(-5px); }
+
+.contact-form-input {
+  background: rgba(10, 10, 20, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 8px;
+}
+.contact-form-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
+.neo-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  transition: all 0.2s ease-in-out;
+}
+.neo-shadow:hover {
+  box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+  transform: translate(-2px, -2px);
+}
+.neo-shadow:active {
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+  transform: translate(4px, 4px);
+}
+.pixel-border {
+  border: 2px solid #000;
+}
+.glass-panel {
+  background: rgba(251, 249, 249, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid #000;
 }
