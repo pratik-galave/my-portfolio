@@ -1,13 +1,13 @@
 export default function Skills() {
   return (
-    <section className="py-24 bg-surface" id="skills">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="font-space text-3xl md:text-4xl font-black uppercase tracking-widest text-on-surface mb-20">Skills</h2>
+    <section className="py-16 md:py-24 bg-surface overflow-hidden" id="skills">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 className="font-space text-3xl md:text-4xl font-black uppercase tracking-widest text-on-surface mb-16 md:mb-20">Skills</h2>
         
         {/* Hexagonal / Staggered Skill Grid */}
         <div className="relative max-w-3xl mx-auto">
           {/* Row 1 */}
-          <div className="flex justify-center flex-wrap gap-12 mb-8">
+          <div className="flex justify-center flex-wrap gap-8 sm:gap-12 mb-8">
             <div className="text-center group">
               <div className="skill-hex"><i className="fa-brands fa-html5 text-3xl text-orange-500"></i></div>
               <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">HTML</p>
@@ -27,7 +27,7 @@ export default function Skills() {
           </div>
           
           {/* Row 2 */}
-          <div className="flex justify-center flex-wrap gap-12 mb-8">
+          <div className="flex justify-center flex-wrap gap-8 sm:gap-12 mb-8">
             <div className="text-center group">
               <div className="skill-hex"><i className="fa-brands fa-css3-alt text-3xl text-blue-500"></i></div>
               <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">CSS</p>
@@ -43,7 +43,7 @@ export default function Skills() {
           </div>
           
           {/* Row 3 */}
-          <div className="flex justify-center flex-wrap gap-12 mb-8">
+          <div className="flex justify-center flex-wrap gap-8 sm:gap-12 mb-8">
             <div className="text-center group">
               <div className="skill-hex"><i className="fa-brands fa-react text-3xl text-cyan-400"></i></div>
               <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">React</p>
@@ -55,7 +55,7 @@ export default function Skills() {
           </div>
           
           {/* Row 4 */}
-          <div className="flex justify-center flex-wrap gap-12">
+          <div className="flex justify-center flex-wrap gap-8 sm:gap-12">
             <div className="text-center group">
               <div className="skill-hex"><i className="fa-brands fa-git-alt text-3xl text-orange-600"></i></div>
               <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">Git</p>

@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <section className="py-24 bg-surface" id="about">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-16 md:py-24 bg-surface" id="about">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16 relative">
           <h2 className="font-space text-4xl md:text-5xl font-black uppercase tracking-widest text-on-surface">About Me</h2>
         </div>
@@ -24,7 +24,7 @@ export default function About() {
 
           {/* Center Image (Archway shape) */}
           <div className="flex justify-center relative">
-            <div className="w-64 h-80 rounded-t-[100px] overflow-hidden bg-surface-variant border-8 border-surface shadow-xl relative z-10">
+            <div className="w-56 sm:w-64 h-72 sm:h-80 rounded-t-[100px] overflow-hidden bg-surface-variant border-8 border-surface shadow-xl relative z-10">
               <img
                 alt="Vruti Reading"
                 className="w-full h-full object-cover"
@@ -32,7 +32,7 @@ export default function About() {
               />
             </div>
             {/* Decorative arch outline behind */}
-            <div className="absolute top-[-10px] w-[270px] h-[340px] rounded-t-[110px] border-2 border-outline-variant z-0"></div>
+            <div className="absolute -top-2.5 w-[240px] sm:w-67.5 h-[310px] sm:h-85 rounded-t-[110px] border-2 border-outline-variant z-0"></div>
           </div>
 
           {/* Right Info Details */}

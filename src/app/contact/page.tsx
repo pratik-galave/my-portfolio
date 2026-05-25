@@ -1,10 +1,10 @@
 export default function ContactPage() {
   return (
-    <div className="pt-[100px] pb-section-gap">
+    <div className="pt-25 pb-16 sm:pb-section-gap overflow-hidden">
       {/* Achievements Section */}
-      <section className="py-section-gap px-margin-page max-w-7xl mx-auto">
+      <section className="py-16 md:py-section-gap px-4 sm:px-margin-page max-w-7xl mx-auto">
         <div className="text-center mb-stack-lg relative">
-          <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl uppercase tracking-tighter inline-block relative z-10 bg-background px-4">Achievements</h2>
+          <h2 className="font-headline-lg md:font-headline-xl text-3xl sm:text-4xl md:text-headline-xl uppercase tracking-tighter inline-block relative z-10 bg-background px-4">Achievements</h2>
           <div className="absolute top-1/2 left-0 w-full h-px bg-primary z-0"></div>
         </div>
 
@@ -58,15 +58,15 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-section-gap px-margin-page bg-primary text-on-primary w-full relative overflow-hidden">
+      <section className="py-16 md:py-section-gap px-4 sm:px-margin-page bg-primary text-on-primary w-full relative overflow-hidden">
         {/* Decorative Large Text Background */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none whitespace-nowrap">
-          <span className="font-headline-xl text-[20vw] leading-none font-black tracking-tighter">HELLO WORLD</span>
+          <span className="font-headline-xl text-[16vw] sm:text-[20vw] leading-none font-black tracking-tighter">HELLO WORLD</span>
         </div>
         
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center relative z-10">
-          <div className="flex flex-col gap-stack-sm">
-            <h2 className="font-headline-xl text-headline-xl md:text-[100px] leading-[0.9] font-black tracking-tighter lowercase">
+          <div className="flex flex-col gap-stack-sm min-w-0">
+            <h2 className="font-headline-xl text-5xl sm:text-6xl md:text-[100px] leading-[0.9] font-black tracking-tighter lowercase">
               just<br />send it.
             </h2>
             <p className="font-label-code text-label-code text-on-primary/70 max-w-sm mt-4">
@@ -74,7 +74,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="w-full">
+          <div className="w-full min-w-0">
             <form className="flex flex-col gap-4">
               <div className="relative group">
                 <label htmlFor="name" className="font-label-code text-label-code text-xs text-on-primary/70 uppercase tracking-wider absolute -top-2 left-4 bg-primary px-1 transition-colors group-focus-within:text-on-primary">Name</label>
@@ -105,7 +105,7 @@ export default function ContactPage() {
               </div>
               <button
                 type="button"
-                className="mt-4 bg-background text-on-background border border-background font-label-code text-label-code px-8 py-4 uppercase tracking-widest hover:bg-transparent hover:text-background transition-colors self-start"
+                className="mt-4 bg-background text-on-background border border-background font-label-code text-label-code px-8 py-4 uppercase tracking-widest hover:bg-transparent hover:text-background transition-colors self-stretch sm:self-start"
               >
                 Send
               </button>

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-primary dark:border-outline-variant">
-      <div className="flex justify-between items-center w-full px-gutter py-4 max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center w-full px-4 sm:px-gutter py-4 max-w-360 mx-auto">
         <Link
           href="/"
           className="font-headline-md text-headline-md font-black tracking-tighter text-primary dark:text-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200"
@@ -11,7 +11,7 @@ export default function Navbar() {
           &lt;coder&gt;
         </Link>
         
-        <div className="hidden md:flex items-center gap-8 font-label-code text-label-code">
+        <div className="hidden md:flex items-center gap-8 font-label-code text-label-code min-w-0 flex-wrap justify-end">
           <Link
             href="/#about"
             className="text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200"

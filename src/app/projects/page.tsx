@@ -1,14 +1,14 @@
 export default function ProjectsPage() {
   return (
-    <div className="pt-[100px] pb-section-gap">
+    <div className="pt-25 pb-16 sm:pb-section-gap overflow-hidden">
       {/* Header Section */}
-      <section className="max-w-[1440px] mx-auto px-gutter md:px-margin-page mb-section-gap">
+      <section className="max-w-360 mx-auto px-4 sm:px-gutter md:px-margin-page mb-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
-          <div className="col-span-1 md:col-span-8">
-            <h1 className="font-headline-xl text-headline-xl md:text-headline-xl text-headline-lg-mobile font-bold tracking-tighter uppercase mb-4">
+          <div className="col-span-1 md:col-span-8 min-w-0">
+            <h1 className="font-headline-xl text-4xl sm:text-5xl md:text-headline-xl text-headline-lg-mobile font-bold tracking-tighter uppercase mb-4 break-words">
               Build.<br />Iterate.<br />Deploy.
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            <p className="font-body-lg text-base sm:text-body-lg text-on-surface-variant max-w-2xl">
               A curated selection of technical projects, highlighting system architecture, performance optimization, and clean code principles.
             </p>
           </div>
@@ -17,7 +17,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Featured Projects */}
-      <section className="max-w-[1440px] mx-auto px-gutter md:px-margin-page mb-section-gap">
+      <section className="max-w-360 mx-auto px-4 sm:px-gutter md:px-margin-page mb-section-gap">
         <div className="flex items-center gap-4 mb-stack-lg">
           <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>terminal</span>
           <h2 className="font-headline-md text-headline-md font-bold uppercase tracking-tight">Featured Projects</h2>
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
                   <span className="material-symbols-outlined text-[20px]">arrow_outward</span>
                 </a>
               </div>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">
+              <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
                 An AI-powered smart nutrition assistant. It helps users make personalized food decisions based on health conditions, goals, and nutritional needs.
               </p>
               <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
@@ -70,7 +70,7 @@ export default function ProjectsPage() {
                   <span className="material-symbols-outlined text-[20px]">arrow_outward</span>
                 </a>
               </div>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">
+              <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
                 An interactive platform for visualizing complex data structures and algorithms in real-time. Built for educational purposes to simplify computer science concepts.
               </p>
               <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Technical Arsenal (Skills) */}
-      <section className="max-w-[1440px] mx-auto px-gutter md:px-margin-page mb-section-gap relative">
+      <section className="max-w-360 mx-auto px-4 sm:px-gutter md:px-margin-page mb-section-gap relative">
         <div className="absolute top-0 right-margin-page opacity-10 pointer-events-none">
           <span className="font-headline-xl text-[200px] font-bold leading-none select-none">{"{}"}</span>
         </div>
@@ -130,19 +130,19 @@ export default function ProjectsPage() {
       </section>
 
       {/* Experience Timeline */}
-      <section className="max-w-[1440px] mx-auto px-gutter md:px-margin-page">
+      <section className="max-w-360 mx-auto px-4 sm:px-gutter md:px-margin-page">
         <div className="flex items-center gap-4 mb-stack-lg">
           <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>work_history</span>
           <h2 className="font-headline-md text-headline-md font-bold uppercase tracking-tight">Experience</h2>
         </div>
         <div className="relative border-l-2 border-primary ml-stack-sm md:ml-0 md:pl-stack-lg">
           {/* Exp Item 1 */}
-          <div className="mb-stack-lg relative pl-stack-md md:pl-0">
-            <div className="absolute w-4 h-4 bg-primary border-2 border-surface rounded-full -left-[1.35rem] md:-left-[2.5rem] top-1"></div>
-            <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+          <div className="mb-stack-lg relative pl-4 sm:pl-stack-md md:pl-0">
+            <div className="absolute w-4 h-4 bg-primary border-2 border-surface rounded-full left-[-1.35rem] md:-left-10 top-1"></div>
+            <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2 min-w-0">
               <h3 className="font-headline-md text-[20px] font-bold">Frontend Developer Intern</h3>
               <span className="font-label-code text-[14px] text-on-surface-variant bg-surface-variant px-2 py-1 border border-outline-variant inline-block w-fit">TechNova Solutions</span>
-              <span className="font-label-code text-[12px] text-outline ml-auto">Jan 2023 - Present</span>
+              <span className="font-label-code text-[12px] text-outline md:ml-auto">Jan 2023 - Present</span>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl">
               Developed and maintained user-facing features using React.js and Tailwind CSS. Collaborated with UX/UI designers to implement responsive and accessible web applications. Optimized component rendering, improving load times by 15%.
@@ -150,12 +150,12 @@ export default function ProjectsPage() {
           </div>
 
           {/* Exp Item 2 */}
-          <div className="relative pl-stack-md md:pl-0">
-            <div className="absolute w-4 h-4 bg-surface border-2 border-primary rounded-full -left-[1.35rem] md:-left-[2.5rem] top-1"></div>
-            <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+          <div className="relative pl-4 sm:pl-stack-md md:pl-0">
+            <div className="absolute w-4 h-4 bg-surface border-2 border-primary rounded-full left-[-1.35rem] md:-left-10 top-1"></div>
+            <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2 min-w-0">
               <h3 className="font-headline-md text-[20px] font-bold">Open Source Contributor</h3>
               <span className="font-label-code text-[14px] text-on-surface-variant bg-surface-variant px-2 py-1 border border-outline-variant inline-block w-fit">Various Projects</span>
-              <span className="font-label-code text-[12px] text-outline ml-auto">Jun 2022 - Dec 2022</span>
+              <span className="font-label-code text-[12px] text-outline md:ml-auto">Jun 2022 - Dec 2022</span>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl">
               Contributed to several open-source libraries in the JavaScript ecosystem. Fixed bugs, improved documentation, and added test coverage. Gained experience in version control workflows and collaborative development.
