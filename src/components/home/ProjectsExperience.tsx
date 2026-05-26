@@ -1,6 +1,6 @@
-export default function ProjectsPage() {
+export default function ProjectsExperience() {
   return (
-    <div className="pt-25 pb-16 sm:pb-section-gap overflow-hidden">
+    <section id="projects" className="py-16 sm:py-section-gap overflow-hidden">
       {/* Header Section */}
       <section className="max-w-360 mx-auto px-4 sm:px-gutter md:px-margin-page mb-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
@@ -24,66 +24,153 @@ export default function ProjectsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
-          {/* Project 1 */}
           <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
             <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
               <img
-                alt="Code editor with colorful syntax highlighting"
+                alt="Velocity - Ride Booking"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD64Yq79__Budg7f6OMF7nXujlLLzOB3QglIKS-mOU6riCh-csNrmNta7rnvTa4MF-ntguOG2SGbbo5Sb9rwQ3foY_c0ZOafG-odS9WsUuK11AdDZE2Wp0vg7WWKsp9dqFfRI64PpmsL7wRRJtIptmZZCOASUTUVlWYoUwTA5R-edIZlPgKlgluRmxI3PdwUSnhXMTTgUUKSynUpJOZhIYV1AaQh5GXJR4s8PYx2LtSEVYh3hkAyVgeym50D_EEZaBw6-yJJXXyuuo"
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=60"
               />
               <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
             </div>
             <div className="p-stack-md flex flex-col h-full">
               <div className="flex justify-between items-start mb-stack-sm">
-                <h3 className="font-headline-md text-[24px] font-bold">NutriPocket</h3>
-                <a href="#" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
-                  <span className="material-symbols-outlined text-[20px]">arrow_outward</span>
-                </a>
+                <div>
+                  <h3 className="font-headline-md text-[24px] font-bold">Velocity</h3>
+                  <div className="flex gap-2 mt-2">
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">React</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">Leaflet.js</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">Node.js</span>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <a href="https://uberwebsite-dusky.vercel.app/" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                    <span className="material-symbols-outlined text-[20px]">launch</span>
+                  </a>
+                  <a href="https://github.com/pratik-galave/uberwebsite.git" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                    <span className="material-symbols-outlined text-[20px]">code</span>
+                  </a>
+                </div>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
-                An AI-powered smart nutrition assistant. It helps users make personalized food decisions based on health conditions, goals, and nutritional needs.
+                An Uber-inspired ride booking and navigation platform with interactive maps, route visualization, and real-time trip management. Built with React, Node.js, Express, MongoDB and Leaflet.js.
               </p>
               <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
                 <span className="px-2 py-1 border border-primary bg-surface-variant">React</span>
                 <span className="px-2 py-1 border border-primary bg-surface-variant">Node.js</span>
                 <span className="px-2 py-1 border border-primary bg-surface-variant">MongoDB</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">Python (AI)</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">Leaflet.js</span>
               </div>
             </div>
           </article>
 
-          {/* Project 2 */}
           <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
             <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
               <img
-                alt="Data visualization dashboard"
+                alt="DevConnect - Developer Social Platform"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHgaoUFpkYwlF4XPXLWS3lsAy5Q9zhPhBwheaiWMVTQxJuoqlyjDJYNMPN6ESqQuxjBram7sxiRZ0GpuRrhQGoDfnhEyLb-ej_kFziTvFd8pzPtjTu3UFRcHEmVPVmFKVbXuaFLReHKjWKsFaehkrr8IquV8OqQeTxwutCx1C4t_0sDnyiWJwywx2tPbSnARP1BBqem-LiPmrVXdTFWPQ3xkB3BZFHJZbC0iOvJS_oX61UdmMPxuokMoF5fBeGK5dJFD9k0Kp1ggs"
+                src="https://images.unsplash.com/photo-1526378723547-8e3b6d9a6f4b?auto=format&fit=crop&w=1400&q=60"
               />
               <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
             </div>
             <div className="p-stack-md flex flex-col h-full">
               <div className="flex justify-between items-start mb-stack-sm">
-                <h3 className="font-headline-md text-[24px] font-bold">DSA Visualizer</h3>
-                <a href="#" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
-                  <span className="material-symbols-outlined text-[20px]">arrow_outward</span>
+                <div>
+                  <h3 className="font-headline-md text-[24px] font-bold">DevConnect</h3>
+                  <div className="flex gap-2 mt-2">
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">MERN</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">JWT</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">Responsive</span>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <a href="https://github.com/pratik-galave/devconnect" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                    <span className="material-symbols-outlined text-[20px]">code</span>
+                  </a>
+                </div>
+              </div>
+              <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
+                DevConnect is a MERN-stack social platform for developers to create profiles, share posts, and collaborate. It includes JWT-based authentication, protected routes, and reusable component patterns for rapid UI development.
+              </p>
+              <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
+                <span className="px-2 py-1 border border-primary bg-surface-variant">React</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">Node.js</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">Express</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">MongoDB</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">JWT</span>
+              </div>
+            </div>
+          </article>
+
+          <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+            <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
+              <img
+                alt="Realtime Chat App"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=60"
+              />
+              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+            </div>
+            <div className="p-stack-md flex flex-col h-full">
+              <div className="flex justify-between items-start mb-stack-sm">
+                <div>
+                  <h3 className="font-headline-md text-[24px] font-bold">Realtime Chat</h3>
+                  <div className="flex gap-2 mt-2">
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">WebSockets</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">Realtime</span>
+                  </div>
+                </div>
+                <a href="https://github.com/pratik-galave/realtime-chat" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                  <span className="material-symbols-outlined text-[20px]">code</span>
                 </a>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
-                An interactive platform for visualizing complex data structures and algorithms in real-time. Built for educational purposes to simplify computer science concepts.
+                A socket-based messaging platform supporting private and group chats, built with WebSockets and a synchronized React frontend. Focused on low-latency message delivery and scalable room management.
               </p>
               <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
-                <span className="px-2 py-1 border border-primary bg-surface-variant">Vue.js</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">D3.js</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">TypeScript</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">WebSockets</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">Node.js</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">React</span>
+              </div>
+            </div>
+          </article>
+
+          <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+            <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
+              <img
+                alt="TaskFlow - Productivity"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1400&q=60"
+              />
+              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+            </div>
+            <div className="p-stack-md flex flex-col h-full">
+              <div className="flex justify-between items-start mb-stack-sm">
+                <div>
+                  <h3 className="font-headline-md text-[24px] font-bold">TaskFlow</h3>
+                  <div className="flex gap-2 mt-2">
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">React</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">REST APIs</span>
+                  </div>
+                </div>
+                <a href="https://github.com/pratik-galave/taskflow" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                  <span className="material-symbols-outlined text-[20px]">code</span>
+                </a>
+              </div>
+              <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
+                TaskFlow is a task management dashboard with CRUD operations, deadline tracking, and progress workflows. Built with a RESTful Node.js backend and a responsive React frontend focused on UX.
+              </p>
+              <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
+                <span className="px-2 py-1 border border-primary bg-surface-variant">React</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">Node.js</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">REST APIs</span>
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      {/* Technical Arsenal (Skills) */}
+      {/* Technical Arsenal */}
       <section className="max-w-360 mx-auto px-4 sm:px-gutter md:px-margin-page mb-section-gap relative">
         <div className="absolute top-0 right-margin-page opacity-10 pointer-events-none">
           <span className="font-headline-xl text-[200px] font-bold leading-none select-none">{"{}"}</span>
@@ -93,7 +180,6 @@ export default function ProjectsPage() {
           <h2 className="font-headline-md text-headline-md font-bold uppercase tracking-tight">Technical Arsenal</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-stack-sm relative z-10">
-          {/* Skill items */}
           <div className="flex flex-col items-center justify-center p-stack-md border border-primary bg-surface hover:bg-surface-variant transition-colors aspect-square group">
             <span className="material-symbols-outlined text-[40px] mb-2 group-hover:scale-110 transition-transform">html</span>
             <span className="font-label-code text-label-code font-bold uppercase">HTML5</span>
@@ -130,13 +216,12 @@ export default function ProjectsPage() {
       </section>
 
       {/* Experience Timeline */}
-      <section className="max-w-360 mx-auto px-4 sm:px-gutter md:px-margin-page">
+      <section id="experience" className="max-w-360 mx-auto px-4 sm:px-gutter md:px-margin-page">
         <div className="flex items-center gap-4 mb-stack-lg">
           <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>work_history</span>
           <h2 className="font-headline-md text-headline-md font-bold uppercase tracking-tight">Experience</h2>
         </div>
         <div className="relative border-l-2 border-primary ml-stack-sm md:ml-0 md:pl-stack-lg">
-          {/* Exp Item 1 */}
           <div className="mb-stack-lg relative pl-4 sm:pl-stack-md md:pl-0">
             <div className="absolute w-4 h-4 bg-primary border-2 border-surface rounded-full left-[-1.35rem] md:-left-10 top-1"></div>
             <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2 min-w-0">
@@ -149,7 +234,6 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          {/* Exp Item 2 */}
           <div className="relative pl-4 sm:pl-stack-md md:pl-0">
             <div className="absolute w-4 h-4 bg-surface border-2 border-primary rounded-full left-[-1.35rem] md:-left-10 top-1"></div>
             <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2 min-w-0">
@@ -163,6 +247,6 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 }

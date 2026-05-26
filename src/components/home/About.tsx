@@ -6,15 +6,15 @@ export default function About() {
           <h2 className="font-space text-4xl md:text-5xl font-black uppercase tracking-widest text-on-surface">About Me</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 items-center">
           {/* Left Bio */}
           <div className="space-y-6 relative">
-            <span className="absolute -top-6 -right-6 text-2xl text-on-surface-variant font-serif">+</span>
+            <span className="hidden md:block absolute -top-6 -right-6 text-2xl text-on-surface-variant font-serif">+</span>
             <h3 className="text-2xl font-bold text-on-surface">Who am I?</h3>
             <p className="text-on-surface-variant leading-relaxed text-sm">
-              I am <strong className="text-on-surface">Vruti Moradiya</strong>, a B.Tech student at MIT ADT, Pune, passionate about coding, problem-solving, and web development. I enjoy building responsive and interactive web applications using technologies like <strong>HTML, CSS, and JavaScript, C, C++, Python</strong>. Currently, I am also exploring <strong>Artificial Intelligence and Machine Learning</strong> to expand my skills and build innovative real-world solutions.
+              I am <strong className="text-on-surface">Pratik Galave</strong>, a B.E. in Information Technology at Army Institute of Technology, Pune. I build full‑stack web applications with a focus on real‑time systems, mapping, and developer tooling. My work spans React/Next.js frontends, Node.js backends, and geolocation-based features using Leaflet.js.
             </p>
-            <a href="#" className="inline-flex items-center gap-3 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-on-primary transition-colors group">
+            <a href="/Pratik_Galave_Resume.pdf" download className="inline-flex items-center gap-3 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-on-primary transition-colors group">
               <span className="text-sm">Download Resume</span>
               <span className="bg-primary text-on-primary p-1 rounded group-hover:bg-on-primary group-hover:text-primary transition-colors">
                 <i className="fa-solid fa-download text-xs"></i>
@@ -32,31 +32,31 @@ export default function About() {
               />
             </div>
             {/* Decorative arch outline behind */}
-            <div className="absolute -top-2.5 w-[240px] sm:w-67.5 h-[310px] sm:h-85 rounded-t-[110px] border-2 border-outline-variant z-0"></div>
+            <div className="absolute -top-2.5 w-60 sm:w-67.5 h-77.5 sm:h-85 rounded-t-[110px] border-2 border-outline-variant z-0"></div>
           </div>
 
           {/* Right Info Details */}
-          <div className="space-y-8 text-right relative">
-            <span className="absolute -top-6 -left-6 text-2xl text-on-surface-variant font-serif">+</span>
+          <div className="space-y-8 text-center md:text-right relative">
+            <span className="hidden md:block absolute -top-6 -left-6 text-2xl text-on-surface-variant font-serif">+</span>
             
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">Name</h4>
-              <p className="text-on-surface-variant text-sm">Vruti Moradiya</p>
+              <p className="text-on-surface-variant text-sm">Pratik Galave</p>
             </div>
             
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">Email</h4>
-              <p className="text-on-surface-variant text-sm">vrutimoradiya999@gmail.com</p>
+              <p className="text-on-surface-variant text-sm wrap-break-word">pratikgalave@outlook.com</p>
             </div>
             
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">Location</h4>
-              <p className="text-on-surface-variant text-sm">Pune, India</p>
+              <p className="text-on-surface-variant text-sm">Pune, Maharashtra, India</p>
             </div>
             
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">College</h4>
-              <p className="text-on-surface-variant text-sm">MIT ADT</p>
+              <p className="text-on-surface-variant text-sm">Army Institute of Technology, Pune</p>
             </div>
           </div>
         </div>

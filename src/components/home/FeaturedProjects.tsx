@@ -19,7 +19,7 @@ export default function FeaturedProjects() {
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-6 mx-auto md:mx-0">
               Nutripocket is an AI-powered smart nutrition and health assistant that helps users make personalized food decisions based on their health conditions, goals, and nutritional needs. The platform combines intelligent meal planning, food scanning, and health insights to promote healthier eating habits through an interactive and user-friendly experience.
             </p>
-            <Link href="/projects" className="text-white border-b border-white pb-1 hover:text-gray-300 transition-colors uppercase tracking-widest text-sm font-bold">
+            <Link href="/#projects" className="text-white border-b border-white pb-1 hover:text-gray-300 transition-colors uppercase tracking-widest text-sm font-bold">
               View All Projects
             </Link>
           </div>
@@ -28,7 +28,7 @@ export default function FeaturedProjects() {
           <div className="relative md:absolute right-0 top-0 md:top-1/2 md:-translate-y-1/2 w-full md:w-3/5 h-64 md:h-full z-10 flex items-center justify-center md:justify-end min-w-0">
             <img
               alt="Nutripocket Dashboard"
-              className="rounded-xl shadow-2xl absolute md:right-10 top-0 w-[80%] opacity-80 scale-90 md:translate-y-[-20%]"
+              className="rounded-xl shadow-2xl md:absolute md:right-10 top-0 w-[80%] opacity-80 md:scale-90 md:translate-y-[-20%]"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEIKEgowHRPZNuPZEXx_TMaukQIYpR8_ls5yJAsYriE8_vItuIQ074Hm-XQbSdYJq75YpOJm5lo6fA2AF8-zP21bZm7Tj2C5L9rdtbTyW-hl7yWRZYdfzTEu7uOdnkTn52xSXS76qwt2QgG8pmzIQxSxCPZQMs3Uvxilj9pzcHkllTiCYaF0xwZyiVQBB4nzSepjxVBVEZi__vxOY-s7xsFUFS_G7UxlrGGHzi2TWcSObZWio0urcTrA-_I0UYmTncUcpEg7aTE4k"
             />
             <img

@@ -1,15 +1,17 @@
 import Hero from "../components/home/Hero";
 import About from "../components/home/About";
-import FeaturedProjects from "../components/home/FeaturedProjects";
+import ProjectsExperience from "../components/home/ProjectsExperience";
 import Skills from "../components/home/Skills";
+import AchievementsContact from "../components/home/AchievementsContact";
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <About />
-      <FeaturedProjects />
+      <ProjectsExperience />
       <Skills />
+      <AchievementsContact />
     </main>
   );
 }

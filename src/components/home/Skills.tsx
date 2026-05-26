@@ -4,73 +4,54 @@ export default function Skills() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <h2 className="font-space text-3xl md:text-4xl font-black uppercase tracking-widest text-on-surface mb-16 md:mb-20">Skills</h2>
         
-        {/* Hexagonal / Staggered Skill Grid */}
-        <div className="relative max-w-3xl mx-auto">
-          {/* Row 1 */}
-          <div className="flex justify-center flex-wrap gap-8 sm:gap-12 mb-8">
-            <div className="text-center group">
-              <div className="skill-hex"><i className="fa-brands fa-html5 text-3xl text-orange-500"></i></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">HTML</p>
+        <div className="relative max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-surface-container-lowest p-6 border border-primary">
+              <h4 className="font-bold mb-3">Programming & Problem Solving</h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">C++</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">JavaScript</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">TypeScript</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Data Structures</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Algorithms</span>
+              </div>
             </div>
-            <div className="text-center group">
-              <div className="skill-hex"><span className="font-bold text-gray-700">MDB</span></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">MongoDB</p>
+
+            <div className="bg-surface-container-lowest p-6 border border-primary">
+              <h4 className="font-bold mb-3">Frontend</h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">HTML</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">CSS</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">React</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Next.js</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Tailwind CSS</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Responsive Design</span>
+              </div>
             </div>
-            <div className="text-center group">
-              <div className="skill-hex"><span className="font-bold text-gray-700">EX</span></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">Express</p>
+
+            <div className="bg-surface-container-lowest p-6 border border-primary">
+              <h4 className="font-bold mb-3">Backend & Real-time</h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Node.js</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Express.js</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">REST APIs</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">JWT</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">WebSockets</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Leaflet.js</span>
+              </div>
             </div>
-            <div className="text-center group">
-              <div className="skill-hex"><span className="font-bold text-gray-700 text-xl">C++</span></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">C++</p>
-            </div>
-          </div>
-          
-          {/* Row 2 */}
-          <div className="flex justify-center flex-wrap gap-8 sm:gap-12 mb-8">
-            <div className="text-center group">
-              <div className="skill-hex"><i className="fa-brands fa-css3-alt text-3xl text-blue-500"></i></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">CSS</p>
-            </div>
-            <div className="text-center group md:mt-12">
-              <div className="skill-hex"><i className="fa-solid fa-person-running text-3xl text-green-500"></i></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">GSAP</p>
-            </div>
-            <div className="text-center group">
-              <div className="skill-hex"><i className="fa-brands fa-node-js text-3xl text-green-600"></i></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">Node.js</p>
-            </div>
-          </div>
-          
-          {/* Row 3 */}
-          <div className="flex justify-center flex-wrap gap-8 sm:gap-12 mb-8">
-            <div className="text-center group">
-              <div className="skill-hex"><i className="fa-brands fa-react text-3xl text-cyan-400"></i></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">React</p>
-            </div>
-            <div className="text-center group md:mt-12">
-              <div className="skill-hex"><span className="font-bold text-gray-700">PAN</span></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">Pandas</p>
-            </div>
-          </div>
-          
-          {/* Row 4 */}
-          <div className="flex justify-center flex-wrap gap-8 sm:gap-12">
-            <div className="text-center group">
-              <div className="skill-hex"><i className="fa-brands fa-git-alt text-3xl text-orange-600"></i></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">Git</p>
-            </div>
-            <div className="text-center group">
-              <div className="skill-hex"><i className="fa-brands fa-js text-3xl text-yellow-400"></i></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">JavaScript</p>
-            </div>
-            <div className="text-center group">
-              <div className="skill-hex"><span className="font-bold text-gray-700 text-xl">C</span></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">C</p>
-            </div>
-            <div className="text-center group">
-              <div className="skill-hex"><i className="fa-brands fa-python text-3xl text-blue-500"></i></div>
-              <p className="text-xs font-bold mt-3 text-on-surface-variant group-hover:text-primary transition-colors">Python</p>
+
+            <div className="bg-surface-container-lowest p-6 border border-primary">
+              <h4 className="font-bold mb-3">Databases, Deployment & Tools</h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">MongoDB</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Vercel</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Railway</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Git</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Docker</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">Postman</span>
+                <span className="px-3 py-1 border border-primary bg-surface-variant text-xs">npm / Vite</span>
+              </div>
             </div>
           </div>
         </div>
