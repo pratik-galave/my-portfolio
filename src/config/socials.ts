@@ -1,7 +1,7 @@
 export const SOCIALS = {
   github: 'https://github.com/pratik-galave',
-  linkedin: '', // add your LinkedIn profile URL here
-  twitter: '',
+  linkedin: 'https://www.linkedin.com/in/pratik-galave-6114a1254', 
+  twitter: 'https://x.com/pra_atik2024', 
   email: 'pratikgalave@outlook.com',
   resume: '/Pratik_Galave_Resume.pdf',
 };

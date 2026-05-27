@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import heroImg from "../../assets/hero.jpg";
 
 export default function Hero() {
   const trackRef = useRef<HTMLDivElement | null>(null);
@@ -49,7 +50,7 @@ export default function Hero() {
           <img
             alt="Pratik Galave Portrait"
             className="h-auto max-h-[320px] sm:max-h-[420px] md:max-h-full object-cover object-bottom z-10 filter grayscale contrast-125"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuBNB5X724gD_ZKTdB3QhVOzqcW48nOODtw22N07w6FQieWMqDj6Yp031RzoW2jf8e4AO5iJueFt_RT7_1e2EhRe22QXHHv5VFDN3Bsot9MvBwuCaRsG1SsMumu8wMVK_ZOJCtFR_GKPB__mMu6i3u0zChOqTHJXKK2nHvHN87y3SiHz1ZqVu2m6n14qe0wTFYgj2A2kuUGpybCMAfKHX1FjpvyEufxq0pugCqdcVQtIw7hrK7a_OuFSkDjXLEzKM5ekgkfV7RWMo"
+            src={heroImg.src}
           />
         </div>
       </div>

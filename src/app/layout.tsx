@@ -24,7 +24,7 @@ export default function RootLayout({
         {/* FontAwesome for Home screen */}
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
       </head>
-      <body className="min-h-full flex flex-col bg-surface text-on-surface font-body-md selection:bg-primary selection:text-on-primary overflow-x-hidden">
+      <body className="min-h-full flex flex-col bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary overflow-x-hidden">
         <Navbar />
         {children}
         <Footer />

@@ -1,3 +1,5 @@
+import aboutImg from "../../assets/about.png";
+
 export default function About() {
   return (
     <section className="py-16 md:py-24 bg-surface" id="about">
@@ -28,7 +30,7 @@ export default function About() {
               <img
                 alt="Vruti Reading"
                 className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTX4wyGdh5Gvd7axepuMRmD2Hb25J36dkpCy1zSzOHrsHjFa9P52tKdffkUUqvs-SV1RqADdKAc6KaXyLKDX1sdOpRR7ZAVqEkTQHdp3xf6WEMCrMfHAhNLD4VFZCHWfPXG59NKQVMsvMBtCTErOAu6MNEClhwpmEhp2Vf2ET0qqqkzhz7DgsOgHqdb9a4E1WGqyOKYQz1ldaNaEW31bW72Jv2cka9S_smTN9-y4GWh0AAWYyIRbYQQC2pT8r4-OnqsBmifPxIU2k"
+                src={aboutImg.src}
               />
             </div>
             {/* Decorative arch outline behind */}
