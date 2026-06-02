@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import heroImg from "../../assets/hero.jpg";
 
 export default function Hero() {
@@ -46,11 +47,16 @@ export default function Hero() {
           <p className="text-on-surface-variant text-base sm:text-lg max-w-md mx-auto md:mx-0">Full‑stack developer — React · Node.js · MongoDB · Real‑time systems</p>
         </div>
         {/* Hero Image */}
-        <div className="w-full md:w-1/2 relative md:absolute md:bottom-0 md:right-0 md:relative flex justify-center md:justify-end items-end h-[320px] sm:h-[420px] md:h-full opacity-90 md:opacity-100">
-          <img
+        <div className="w-full md:w-1/2 relative md:absolute md:bottom-0 md:right-0 flex justify-center md:justify-end items-end h-[320px] sm:h-[420px] md:h-full opacity-90 md:opacity-100">
+          <Image
+            src={heroImg}
             alt="Pratik Galave Portrait"
-            className="h-auto max-h-[320px] sm:max-h-[420px] md:max-h-full object-cover object-bottom z-10 filter grayscale contrast-125"
-            src={heroImg.src}
+            className="object-cover object-bottom z-10 w-full h-full"
+            width={(heroImg as any).width}
+            height={(heroImg as any).height}
+            quality={100}
+            unoptimized
+            priority
           />
         </div>
       </div>

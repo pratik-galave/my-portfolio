@@ -30,35 +30,31 @@ export default function Navbar() {
       // ignore
     }
   }, []);
-  const navLinkClass = "text-on-surface-variant dark:text-on-secondary-fixed-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200";
-  const resumeBtnClass = "hidden md:inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary font-label-code text-label-code border border-primary hover:bg-surface hover:text-primary transition-all duration-200 neo-shadow";
+  const navLinkClass = "text-on-navbar font-medium hover:opacity-90 transition-colors duration-200";
+  const resumeBtnClass = "hidden md:inline-flex items-center justify-center gap-2 px-4 py-2 bg-surface text-on-surface font-label-code text-label-code border border-primary hover:bg-primary hover:text-on-primary transition-all duration-200 neo-shadow";
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-primary dark:border-outline-variant">
-      <div className="flex items-center justify-between w-full px-4 sm:px-gutter py-4 max-w-360 mx-auto">
-        <Link
-          href="/"
-          className="inline-flex items-center hover:opacity-90 transition-opacity duration-200"
-          aria-label="Go to homepage"
-        >
+    <nav className="fixed top-0 w-full z-50 navbar-bg border-b border-primary dark:border-outline-variant">
+      <div className="flex items-center justify-between w-full px-4 sm:px-6 lg:px-8 py-4 max-w-7xl mx-auto">
+        <Link href="/" aria-label="Go to homepage" className="inline-flex items-center hover:opacity-90 transition-opacity duration-200 flex-shrink-0">
           <Image
             src={logo}
             alt="Pratik Galave logo"
             width={230}
             height={69}
-            className="h-14 w-auto object-contain"
+            className="h-10 sm:h-12 md:h-14 w-auto object-contain"
             priority
           />
         </Link>
         
-        <div className="hidden md:flex items-center gap-8 font-label-code text-label-code min-w-0 flex-wrap justify-end">
+        <div className="hidden md:flex md:flex-1 items-center gap-6 font-label-code text-label-code min-w-0 flex-wrap md:justify-center lg:justify-end">
           <Link href="/#about" className={navLinkClass}>About</Link>
           <Link href="/#projects" className={navLinkClass}>Projects</Link>
           <Link href="/#skills" className={navLinkClass}>Skills</Link>
           <Link href="/#contact" className={navLinkClass}>Experience & Contact</Link>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-shrink-0">
           <a href="/Pratik_Galave_Resume.pdf" target="_blank" rel="noopener noreferrer" className={resumeBtnClass}>
             Resume
           </a>

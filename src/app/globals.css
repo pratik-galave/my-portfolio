@@ -26,7 +26,9 @@
   --color-on-tertiary-container: #838484;
   --color-secondary-fixed: #e2e2e2;
   --color-on-secondary-fixed: #1a1c1c;
-  --color-background: #ffffff;
+  --color-background: #F2F0F3;
+  --color-navbar: #ffffff;
+  --color-on-navbar: #111111;
   --color-secondary: #5d5f5f;
   --color-outline: #7e7576;
   --color-tertiary: #000000;
@@ -161,3 +163,12 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid #000;
 }
+
+.navbar-bg {
+  background: var(--color-navbar);
+  color: var(--color-on-navbar);
+}
+
+/* Reverted hero edge masking — removed to restore original image edges */
+
+/* Eyes-follow-cursor removed per user request */

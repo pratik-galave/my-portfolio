@@ -1,4 +1,103 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+
 export default function AchievementsContact() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState('');
+  const [initialized, setInitialized] = useState(false);
+
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    
+    console.log('EmailJS Config:', {
+      publicKey: publicKey ? publicKey.substring(0, 10) + '...' : 'MISSING',
+      serviceId: serviceId ? serviceId.substring(0, 10) + '...' : 'MISSING',
+      templateId: templateId ? templateId.substring(0, 10) + '...' : 'MISSING',
+    });
+    
+    if (publicKey) {
+      emailjs.init(publicKey);
+      setInitialized(true);
+      console.log('✓ EmailJS initialized');
+    } else {
+      console.warn('❌ EmailJS public key not found in environment variables');
+      setInitialized(false);
+    }
+  }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus('error');
+      setStatusMessage('Please fill in all fields');
+      return;
+    }
+
+    if (!initialized) {
+      setStatus('error');
+      setStatusMessage('Email service not configured. Please contact the developer.');
+      return;
+    }
+
+    setStatus('loading');
+
+    try {
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+
+      if (!serviceId || !templateId) {
+        setStatus('error');
+        setStatusMessage('Email service configuration incomplete.');
+        console.error('Missing serviceId or templateId:', { serviceId, templateId });
+        return;
+      }
+
+      console.log('Sending email with:', { serviceId, templateId, ...formData });
+
+      const response = await emailjs.send(serviceId, templateId, {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'pratikgalave@outlook.com',
+      });
+
+      console.log('✓ Email sent successfully:', response);
+      setStatus('success');
+      setStatusMessage("Message sent! I'll get back to you soon.");
+      setFormData({ name: '', email: '', message: '' });
+
+      // Clear success message after 3 seconds
+      setTimeout(() => {
+        setStatus('idle');
+        setStatusMessage('');
+      }, 3000);
+    } catch (error: any) {
+      console.error('❌ EmailJS error:', error);
+      setStatus('error');
+      
+      // Extract error message from various possible error formats
+      let errorMsg = 'Failed to send message';
+      if (error?.text) errorMsg = error.text;
+      else if (error?.message) errorMsg = error.message;
+      else if (error?.status) errorMsg = `Error: Status ${error.status}`;
+      else errorMsg = JSON.stringify(error);
+      
+      setStatusMessage(`${errorMsg}. Please try again or email directly.`);
+    }
+  };
+
   return (
     <section id="contact" className="pb-16 sm:pb-section-gap overflow-hidden">
       {/* Achievements Section */}
@@ -47,7 +146,7 @@ export default function AchievementsContact() {
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="font-body-lg text-body-lg font-bold">Projects</h4>
                 </div>
-                <p className="font-body-md text-body-md text-on-surface-variant text-sm">Featured: Velocity (ride-booking & navigation), DevConnect (developer social), Realtime Chat, TaskFlow — full-stack projects using React, Node, MongoDB, and Leaflet.js.</p>
+                <p className="font-body-md text-body-md text-on-surface-variant text-sm">Featured: Velocity (ride-booking & navigation), DevConnect (developer social), CodeSync, TaskFlow — full-stack projects using React, Node, MongoDB, and Leaflet.js.</p>
               </div>
             </div>
           </div>
@@ -71,14 +170,17 @@ export default function AchievementsContact() {
           </div>
 
           <div className="w-full min-w-0">
-            <form className="flex flex-col gap-4">
+            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
               <div className="relative group">
                 <label htmlFor="name" className="font-label-code text-label-code text-xs text-on-primary/70 uppercase tracking-wider absolute -top-2 left-4 bg-primary px-1 transition-colors group-focus-within:text-on-primary">Name</label>
                 <input
                   type="text"
                   id="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="John Doe"
                   className="w-full bg-transparent border border-outline-variant text-on-primary p-4 focus:ring-0 focus:border-on-primary transition-colors font-body-md rounded-none placeholder-on-primary/30"
+                  disabled={status === 'loading'}
                 />
               </div>
               <div className="relative group">
@@ -86,8 +188,11 @@ export default function AchievementsContact() {
                 <input
                   type="email"
                   id="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="john@example.com"
                   className="w-full bg-transparent border border-outline-variant text-on-primary p-4 focus:ring-0 focus:border-on-primary transition-colors font-body-md rounded-none placeholder-on-primary/30"
+                  disabled={status === 'loading'}
                 />
               </div>
               <div className="relative group">
@@ -95,15 +200,31 @@ export default function AchievementsContact() {
                 <textarea
                   id="message"
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Let's build something..."
                   className="w-full bg-transparent border border-outline-variant text-on-primary p-4 focus:ring-0 focus:border-on-primary transition-colors font-body-md rounded-none placeholder-on-primary/30 resize-none"
+                  disabled={status === 'loading'}
                 ></textarea>
               </div>
+
+              {/* Status Message */}
+              {statusMessage && (
+                <div className={`font-label-code text-label-code px-4 py-3 border ${
+                  status === 'success' 
+                    ? 'border-on-primary/30 bg-on-primary/5 text-on-primary' 
+                    : 'border-red-600/30 bg-red-600/5 text-red-600'
+                }`}>
+                  {statusMessage}
+                </div>
+              )}
+
               <button
-                type="button"
-                className="mt-4 bg-background text-on-background border border-background font-label-code text-label-code px-8 py-4 uppercase tracking-widest hover:bg-transparent hover:text-background transition-colors self-stretch sm:self-start"
+                type="submit"
+                disabled={status === 'loading'}
+                className="mt-4 bg-background text-on-background border border-background font-label-code text-label-code px-8 py-4 uppercase tracking-widest hover:bg-transparent hover:text-background transition-colors self-stretch sm:self-start disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send
+                {status === 'loading' ? 'Sending...' : 'Send'}
               </button>
             </form>
           </div>

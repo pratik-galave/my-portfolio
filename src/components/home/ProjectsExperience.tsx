@@ -1,3 +1,7 @@
+import velocityImg from "@/assets/uberwebsite-dusky.vercel.app_.png";
+import codesyncImg from "@/assets/codesync-l3la.onrender.com_.png";
+import Image from "next/image";
+
 export default function ProjectsExperience() {
   return (
     <section id="projects" className="py-16 sm:py-section-gap overflow-hidden">
@@ -26,12 +30,14 @@ export default function ProjectsExperience() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
           <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
             <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
-              <img
+              <Image
                 alt="Velocity - Ride Booking"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=60"
+                className="w-full h-full object-cover"
+                src={velocityImg}
+                width={(velocityImg as any).width || 1200}
+                height={(velocityImg as any).height || 640}
+                unoptimized
               />
-              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
             </div>
             <div className="p-stack-md flex flex-col h-full">
               <div className="flex justify-between items-start mb-stack-sm">
@@ -49,6 +55,9 @@ export default function ProjectsExperience() {
                   </a>
                   <a href="https://github.com/pratik-galave/uberwebsite.git" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
                     <span className="material-symbols-outlined text-[20px]">code</span>
+                  </a>
+                  <a href="https://drive.google.com/file/d/1eZDnrHfsbk-fXaepMzex3TUYMUFXBnq_/view?usp=drive_link" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                    <span className="material-symbols-outlined text-[20px]">ondemand_video</span>
                   </a>
                 </div>
               </div>
@@ -68,10 +77,9 @@ export default function ProjectsExperience() {
             <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
               <img
                 alt="DevConnect - Developer Social Platform"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover"
                 src="https://images.unsplash.com/photo-1526378723547-8e3b6d9a6f4b?auto=format&fit=crop&w=1400&q=60"
               />
-              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
             </div>
             <div className="p-stack-md flex flex-col h-full">
               <div className="flex justify-between items-start mb-stack-sm">
@@ -104,28 +112,35 @@ export default function ProjectsExperience() {
 
           <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
             <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
-              <img
-                alt="Realtime Chat App"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=60"
+              <Image
+                alt="CodeSync - Real-time Collaboration"
+                className="w-full h-full object-cover"
+                src={codesyncImg}
+                width={(codesyncImg as any).width || 1200}
+                height={(codesyncImg as any).height || 640}
+                unoptimized
               />
-              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
             </div>
             <div className="p-stack-md flex flex-col h-full">
               <div className="flex justify-between items-start mb-stack-sm">
                 <div>
-                  <h3 className="font-headline-md text-[24px] font-bold">Realtime Chat</h3>
+                  <h3 className="font-headline-md text-[24px] font-bold">CodeSync</h3>
                   <div className="flex gap-2 mt-2">
                     <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">WebSockets</span>
                     <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">Realtime</span>
                   </div>
                 </div>
-                <a href="https://github.com/pratik-galave/realtime-chat" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
-                  <span className="material-symbols-outlined text-[20px]">code</span>
-                </a>
+                <div className="flex gap-2">
+                  <a href="https://github.com/pratik-galave/realtime-chat" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                    <span className="material-symbols-outlined text-[20px]">code</span>
+                  </a>
+                  <a href="https://drive.google.com/file/d/1NKmJ2LQIsSiCwrXK0W6JuJor33j6VNDY/view?usp=drive_link" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                    <span className="material-symbols-outlined text-[20px]">ondemand_video</span>
+                  </a>
+                </div>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
-                A socket-based messaging platform supporting private and group chats, built with WebSockets and a synchronized React frontend. Focused on low-latency message delivery and scalable room management.
+                CodeSync is a real-time collaboration and chat platform for developers — supporting private and group messaging, code snippet sharing, and low-latency synchronization using WebSockets.
               </p>
               <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
                 <span className="px-2 py-1 border border-primary bg-surface-variant">WebSockets</span>
@@ -139,10 +154,9 @@ export default function ProjectsExperience() {
             <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
               <img
                 alt="TaskFlow - Productivity"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover"
                 src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1400&q=60"
               />
-              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
             </div>
             <div className="p-stack-md flex flex-col h-full">
               <div className="flex justify-between items-start mb-stack-sm">

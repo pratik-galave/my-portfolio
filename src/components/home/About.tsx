@@ -1,6 +1,69 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import aboutImg from "../../assets/about.png";
 
 export default function About() {
+  useEffect(() => {
+    const wrap = document.querySelector('.about-eye-wrap');
+    if (!wrap) return;
+    const eyes = Array.from(wrap.querySelectorAll('.eye')) as HTMLElement[];
+    if (!eyes.length) return;
+
+    let raf = 0;
+
+    const onMove = (clientX: number, clientY: number) => {
+      eyes.forEach((eye) => {
+        const pupil = eye.querySelector('.pupil') as HTMLElement | null;
+        if (!pupil) return;
+        const eyeRect = eye.getBoundingClientRect();
+        const cx = eyeRect.left + eyeRect.width / 2;
+        const cy = eyeRect.top + eyeRect.height / 2;
+        const dx = clientX - cx;
+        const dy = clientY - cy;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const angle = Math.atan2(dy, dx);
+        const max = Math.min(eyeRect.width, eyeRect.height) * 0.28; // max pupil offset
+        const offset = Math.min(max, dist * 0.08 + 2);
+        const px = Math.cos(angle) * offset;
+        const py = Math.sin(angle) * offset;
+        pupil.style.transform = `translate(${px}px, ${py}px)`;
+      });
+    };
+
+    const handleMove = (e: MouseEvent) => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => onMove(e.clientX, e.clientY));
+    };
+
+    const handleTouch = (e: TouchEvent) => {
+      if (e.touches && e.touches[0]) {
+        const t = e.touches[0];
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => onMove(t.clientX, t.clientY));
+      }
+    };
+
+    wrap.addEventListener('mousemove', handleMove);
+    wrap.addEventListener('touchmove', handleTouch, { passive: true });
+
+    // reset pupils on leave
+    const reset = () => {
+      eyes.forEach((eye) => {
+        const pupil = eye.querySelector('.pupil') as HTMLElement | null;
+        if (pupil) pupil.style.transform = '';
+      });
+    };
+    wrap.addEventListener('mouseleave', reset);
+
+    return () => {
+      wrap.removeEventListener('mousemove', handleMove);
+      wrap.removeEventListener('touchmove', handleTouch as any);
+      wrap.removeEventListener('mouseleave', reset);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <section className="py-16 md:py-24 bg-surface" id="about">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -26,12 +89,15 @@ export default function About() {
 
           {/* Center Image (Archway shape) */}
           <div className="flex justify-center relative">
-            <div className="w-56 sm:w-64 h-72 sm:h-80 rounded-t-[100px] overflow-hidden bg-surface-variant border-8 border-surface shadow-xl relative z-10">
+            <div className="w-56 sm:w-64 h-72 sm:h-80 rounded-t-[100px] overflow-hidden bg-surface-variant border-8 border-surface shadow-xl relative z-10 about-eye-wrap" data-eyes="true">
               <img
                 alt="Vruti Reading"
                 className="w-full h-full object-cover"
                 src={aboutImg.src}
               />
+              {/* pupil overlays — absolute positioned, move via JS */}
+              <div className="eye eye-left"><div className="pupil" /></div>
+              <div className="eye eye-right"><div className="pupil" /></div>
             </div>
             {/* Decorative arch outline behind */}
             <div className="absolute -top-2.5 w-60 sm:w-67.5 h-77.5 sm:h-85 rounded-t-[110px] border-2 border-outline-variant z-0"></div>
