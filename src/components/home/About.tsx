@@ -76,22 +76,24 @@ export default function About() {
           <div className="space-y-6 relative">
             <span className="hidden md:block absolute -top-6 -right-6 text-2xl text-on-surface-variant font-serif">+</span>
             <h3 className="text-2xl font-bold text-on-surface">Who am I?</h3>
-            <p className="text-on-surface-variant leading-relaxed text-sm">
-              I am <strong className="text-on-surface">Pratik Galave</strong>, a B.E. in Information Technology at Army Institute of Technology, Pune. I build full‑stack web applications with a focus on real‑time systems, mapping, and developer tooling. My work spans React/Next.js frontends, Node.js backends, and geolocation-based features using Leaflet.js.
-            </p>
-            <a href="/Pratik_Galave_Resume.pdf" download className="inline-flex items-center gap-3 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-on-primary transition-colors group">
-              <span className="text-sm">Download Resume</span>
-              <span className="bg-primary text-on-primary p-1 rounded group-hover:bg-on-primary group-hover:text-primary transition-colors">
-                <i className="fa-solid fa-download text-xs"></i>
-              </span>
-            </a>
+
+            <p className="text-on-surface-variant leading-relaxed text-sm">I'm a second-year engineering student who enjoys building software, learning new technologies, and turning ideas into real projects.</p>
+
+            <p className="text-on-surface-variant leading-relaxed text-sm">Over time, I've discovered that programming is basically a conversation between me and my computer:</p>
+
+            <p className="text-on-surface-variant leading-relaxed text-sm"><em>Me:</em> "Do exactly what I want."<br /><em>Computer:</em> "I did exactly what you wrote."<br /><em>Me:</em> "That's the problem."</p>
+
+            <p className="text-on-surface-variant leading-relaxed text-sm">When I'm not coding, you'll usually find me exploring new tools, working on projects, preparing for exams, or learning something new that seemed impossible a week ago.</p>
+
+            <p className="text-on-surface-variant leading-relaxed text-sm">This portfolio is a collection of what I've built, what I've learned, and where I'm headed next. Feel free to explore—and if you find a bug, just know it's a premium hidden feature. 😄</p>
+            
           </div>
 
           {/* Center Image (Archway shape) */}
           <div className="flex justify-center relative">
             <div className="w-56 sm:w-64 h-72 sm:h-80 rounded-t-[100px] overflow-hidden bg-surface-variant border-8 border-surface shadow-xl relative z-10 about-eye-wrap" data-eyes="true">
               <img
-                alt="Vruti Reading"
+                alt="Pratik Galave portrait"
                 className="w-full h-full object-cover"
                 src={aboutImg.src}
               />
@@ -114,7 +116,7 @@ export default function About() {
             
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">Email</h4>
-              <p className="text-on-surface-variant text-sm wrap-break-word">pratikgalave@outlook.com</p>
+              <p className="text-on-surface-variant text-sm wrap-break-word">pratikgalave7498@gmail.com</p>
             </div>
             
             <div>
@@ -126,6 +128,13 @@ export default function About() {
               <h4 className="text-xl font-bold text-on-surface mb-1">College</h4>
               <p className="text-on-surface-variant text-sm">Army Institute of Technology, Pune</p>
             </div>
+
+            <a href="/Pratik_Galave_Resume.pdf" download className="inline-flex items-center gap-3 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-on-primary transition-colors group">
+              <span className="text-sm">Download Resume</span>
+              <span className="bg-primary text-on-primary p-1 rounded group-hover:bg-on-primary group-hover:text-primary transition-colors">
+                <i className="fa-solid fa-download text-xs"></i>
+              </span>
+            </a>
           </div>
         </div>
       </div>

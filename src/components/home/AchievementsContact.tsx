@@ -23,6 +23,7 @@ export default function AchievementsContact() {
     
     if (publicKey) {
       emailjs.init(publicKey);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setInitialized(true);
       console.log('✓ EmailJS initialized');
     } else {
@@ -70,7 +71,7 @@ export default function AchievementsContact() {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: 'pratikgalave@outlook.com',
+        to_email: 'pratikgalave7498@gmail.com',
       });
 
       console.log('✓ Email sent successfully:', response);
@@ -83,7 +84,7 @@ export default function AchievementsContact() {
         setStatus('idle');
         setStatusMessage('');
       }, 3000);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('❌ EmailJS error:', error);
       setStatus('error');
       
@@ -133,7 +134,7 @@ export default function AchievementsContact() {
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
               <span className="material-symbols-outlined text-[100px]">emoji_events</span>
             </div>
-            <h3 className="font-headline-md text-headline-md relative z-10 mb-stack-sm">Positions & Projects</h3>
+            <h3 className="font-headline-md text-headline-md relative z-10 mb-stack-sm">Positions</h3>
             <div className="grid grid-cols-1 gap-4 relative z-10">
               <div className="bg-background border border-primary p-4 neo-shadow">
                 <div className="flex justify-between items-start mb-2">
@@ -142,11 +143,13 @@ export default function AchievementsContact() {
                 </div>
                 <p className="font-body-md text-body-md text-on-surface-variant text-sm">Coordinated technical initiatives, organized student events, and led development-focused activities.</p>
               </div>
-              <div className="bg-background border border-primary p-4 hover:neo-shadow transition-shadow">
+              
+              <div className="bg-background border border-primary p-4 neo-shadow transform hover:-translate-y-1 transition-shadow transition-transform duration-200">
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-body-lg text-body-lg font-bold">Projects</h4>
+                  <h4 className="font-body-lg text-body-lg font-bold">College Innovation &amp; Development Club (CIDC)</h4>
+                  <span className="bg-primary text-on-primary font-label-code text-label-code px-2 py-1 text-xs">SE member</span>
                 </div>
-                <p className="font-body-md text-body-md text-on-surface-variant text-sm">Featured: Velocity (ride-booking & navigation), DevConnect (developer social), CodeSync, TaskFlow — full-stack projects using React, Node, MongoDB, and Leaflet.js.</p>
+                <p className="font-body-md text-body-md text-on-surface-variant text-sm">Works on solving campus problems by building tools, automations, and process improvements that address real college challenges.</p>
               </div>
             </div>
           </div>
@@ -165,7 +168,7 @@ export default function AchievementsContact() {
               just<br />send it.
             </h2>
             <p className="font-label-code text-label-code text-on-primary/70 max-w-sm mt-4">
-              Open for freelance opportunities, open-source collaborations, or just a chat about code. Email: <a href="mailto:pratikgalave@outlook.com" className="underline">pratikgalave@outlook.com</a>
+              Open for freelance opportunities, open-source collaborations, or just a chat about code. Email: <a href="mailto:pratikgalave7498@gmail.com" className="underline">pratikgalave7498@gmail.com</a>
             </p>
           </div>
 
