@@ -131,6 +131,9 @@ export default function ProjectsExperience() {
                   </div>
                 </div>
                 <div className="flex gap-2">
+                  <a href="https://codesync-l3la.onrender.com/" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                    <span className="material-symbols-outlined text-[20px]">launch</span>
+                  </a>
                   <a href="https://github.com/pratik-galave/realtime-chat" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
                     <span className="material-symbols-outlined text-[20px]">code</span>
                   </a>
@@ -184,50 +187,6 @@ export default function ProjectsExperience() {
         </div>
       </section>
 
-      {/* Technical Arsenal */}
-      <section className="max-w-360 mx-auto px-4 sm:px-gutter md:px-margin-page mb-section-gap relative">
-        <div className="absolute top-0 right-margin-page opacity-10 pointer-events-none">
-          <span className="font-headline-xl text-[200px] font-bold leading-none select-none">{"{}"}</span>
-        </div>
-        <div className="flex items-center gap-4 mb-stack-lg relative z-10">
-          <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>code_blocks</span>
-          <h2 className="font-headline-md text-headline-md font-bold uppercase tracking-tight">Technical Arsenal</h2>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-stack-sm relative z-10">
-          <div className="flex flex-col items-center justify-center p-stack-md border border-primary bg-surface hover:bg-surface-variant transition-colors aspect-square group">
-            <span className="material-symbols-outlined text-[40px] mb-2 group-hover:scale-110 transition-transform">html</span>
-            <span className="font-label-code text-label-code font-bold uppercase">HTML5</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-stack-md border border-primary bg-surface hover:bg-surface-variant transition-colors aspect-square group">
-            <span className="material-symbols-outlined text-[40px] mb-2 group-hover:scale-110 transition-transform">css</span>
-            <span className="font-label-code text-label-code font-bold uppercase">CSS3</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-stack-md border border-primary bg-surface hover:bg-surface-variant transition-colors aspect-square group">
-            <span className="material-symbols-outlined text-[40px] mb-2 group-hover:scale-110 transition-transform">javascript</span>
-            <span className="font-label-code text-label-code font-bold uppercase">JavaScript</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-stack-md border border-primary bg-surface hover:bg-surface-variant transition-colors aspect-square group">
-            <span className="material-symbols-outlined text-[40px] mb-2 group-hover:scale-110 transition-transform">data_object</span>
-            <span className="font-label-code text-label-code font-bold uppercase">React</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-stack-md border border-primary bg-surface hover:bg-surface-variant transition-colors aspect-square group">
-            <span className="material-symbols-outlined text-[40px] mb-2 group-hover:scale-110 transition-transform">dns</span>
-            <span className="font-label-code text-label-code font-bold uppercase">Node.js</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-stack-md border border-primary bg-surface hover:bg-surface-variant transition-colors aspect-square group">
-            <span className="material-symbols-outlined text-[40px] mb-2 group-hover:scale-110 transition-transform">database</span>
-            <span className="font-label-code text-label-code font-bold uppercase">MongoDB</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-stack-md border border-primary bg-surface hover:bg-surface-variant transition-colors aspect-square group">
-            <span className="material-symbols-outlined text-[40px] mb-2 group-hover:scale-110 transition-transform">code</span>
-            <span className="font-label-code text-label-code font-bold uppercase">C++</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-stack-md border border-primary bg-surface hover:bg-surface-variant transition-colors aspect-square group">
-            <span className="material-symbols-outlined text-[40px] mb-2 group-hover:scale-110 transition-transform">terminal</span>
-            <span className="font-label-code text-label-code font-bold uppercase">Python</span>
-          </div>
-        </div>
-      </section>
 
       {/* Experience removed — now a separate component to match navbar order */}
     </section>

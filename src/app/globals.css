@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-on-secondary-fixed-variant: #454747;
   --color-surface-tint: #5e5e5e;
@@ -76,6 +78,28 @@ body {
   color: var(--color-on-background);
 }
 
+.dark {
+  color-scheme: dark;
+  --color-background: #0f0f11;
+  --color-on-background: #e2e2e7;
+  --color-surface: #19191c;
+  --color-on-surface: #e2e2e7;
+  --color-navbar: #151518;
+  --color-on-navbar: #ffffff;
+  --color-primary: #ffffff;
+  --color-on-primary: #121214;
+  --color-surface-container: #17171a;
+  --color-surface-container-lowest: #0d0d0f;
+  --color-surface-container-low: #141416;
+  --color-surface-container-high: #202024;
+  --color-surface-container-highest: #28282d;
+  --color-surface-variant: #242429;
+  --color-surface-dim: #101012;
+  --color-outline: #8e8a90;
+  --color-outline-variant: #423f44;
+  --color-on-surface-variant: #c4c1c7;
+}
+
 .tech-marquee {
   display: flex;
   overflow: hidden;
@@ -112,7 +136,7 @@ body {
   top: -60px;
   width: 2px;
   height: 60px;
-  background-color: #fff;
+  background-color: var(--color-on-background);
 }
 .hanging-sign::before { left: 10%; }
 .hanging-sign::after { right: 10%; }
@@ -120,7 +144,7 @@ body {
 .skill-hex {
   width: 80px;
   height: 80px;
-  background-color: white;
+  background-color: var(--color-surface);
   border-radius: 20px;
   display: flex;
   align-items: center;

@@ -5,7 +5,7 @@ import aboutImg from "../../assets/about.png";
 
 export default function About() {
   useEffect(() => {
-    const wrap = document.querySelector('.about-eye-wrap');
+    const wrap = document.querySelector('.about-eye-wrap') as HTMLElement | null;
     if (!wrap) return;
     const eyes = Array.from(wrap.querySelectorAll('.eye')) as HTMLElement[];
     if (!eyes.length) return;
