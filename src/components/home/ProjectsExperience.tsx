@@ -75,43 +75,6 @@ export default function ProjectsExperience() {
 
           <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
             <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
-              <img
-                alt="DevConnect - Developer Social Platform"
-                className="w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1526378723547-8e3b6d9a6f4b?auto=format&fit=crop&w=1400&q=60"
-              />
-            </div>
-            <div className="p-stack-md flex flex-col h-full">
-              <div className="flex justify-between items-start mb-stack-sm">
-                <div>
-                  <h3 className="font-headline-md text-[24px] font-bold">DevConnect</h3>
-                  <div className="flex gap-2 mt-2">
-                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">MERN</span>
-                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">JWT</span>
-                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">Responsive</span>
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <a href="https://github.com/pratik-galave/devconnect" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
-                    <span className="material-symbols-outlined text-[20px]">code</span>
-                  </a>
-                </div>
-              </div>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
-                DevConnect is a MERN-stack social platform for developers to create profiles, share posts, and collaborate. It includes JWT-based authentication, protected routes, and reusable component patterns for rapid UI development.
-              </p>
-              <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
-                <span className="px-2 py-1 border border-primary bg-surface-variant">React</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">Node.js</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">Express</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">MongoDB</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">JWT</span>
-              </div>
-            </div>
-          </article>
-
-          <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
-            <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
               <Image
                 alt="CodeSync - Real-time Collaboration"
                 className="w-full h-full object-cover"
@@ -149,38 +112,6 @@ export default function ProjectsExperience() {
                 <span className="px-2 py-1 border border-primary bg-surface-variant">WebSockets</span>
                 <span className="px-2 py-1 border border-primary bg-surface-variant">Node.js</span>
                 <span className="px-2 py-1 border border-primary bg-surface-variant">React</span>
-              </div>
-            </div>
-          </article>
-
-          <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
-            <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden">
-              <img
-                alt="TaskFlow - Productivity"
-                className="w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1400&q=60"
-              />
-            </div>
-            <div className="p-stack-md flex flex-col h-full">
-              <div className="flex justify-between items-start mb-stack-sm">
-                <div>
-                  <h3 className="font-headline-md text-[24px] font-bold">TaskFlow</h3>
-                  <div className="flex gap-2 mt-2">
-                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">React</span>
-                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">REST APIs</span>
-                  </div>
-                </div>
-                <a href="https://github.com/pratik-galave/taskflow" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
-                  <span className="material-symbols-outlined text-[20px]">code</span>
-                </a>
-              </div>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
-                TaskFlow is a task management dashboard with CRUD operations, deadline tracking, and progress workflows. Built with a RESTful Node.js backend and a responsive React frontend focused on UX.
-              </p>
-              <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
-                <span className="px-2 py-1 border border-primary bg-surface-variant">React</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">Node.js</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">REST APIs</span>
               </div>
             </div>
           </article>
