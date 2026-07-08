@@ -46,10 +46,35 @@ export default function AchievementsContact() {
       return;
     }
 
-    if (!initialized) {
+    const missingVars = [];
+    if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID) missingVars.push('NEXT_PUBLIC_EMAILJS_SERVICE_ID');
+    if (!process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID) missingVars.push('NEXT_PUBLIC_EMAILJS_TEMPLATE_ID');
+    if (!process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) missingVars.push('NEXT_PUBLIC_EMAILJS_PUBLIC_KEY');
+
+    if (missingVars.length > 0) {
       setStatus('error');
-      setStatusMessage('Email service not configured. Please contact the developer.');
+      setStatusMessage(`Email service not configured. Missing environment variable(s): ${missingVars.join(', ')}`);
       return;
+    }
+
+    if (!initialized) {
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+      if (publicKey) {
+        try {
+          emailjs.init(publicKey);
+          setInitialized(true);
+          console.log('✓ EmailJS initialized on-demand');
+        } catch (initErr) {
+          console.error('Failed to initialize EmailJS on-demand:', initErr);
+          setStatus('error');
+          setStatusMessage('Failed to initialize email service. Please contact the developer.');
+          return;
+        }
+      } else {
+        setStatus('error');
+        setStatusMessage('Email service not initialized. Please refresh the page.');
+        return;
+      }
     }
 
     setStatus('loading');
@@ -89,12 +114,25 @@ export default function AchievementsContact() {
       setStatus('error');
       
       // Extract error message from various possible error formats
-      const err = error as any;
       let errorMsg = 'Failed to send message';
-      if (err?.text) errorMsg = err.text;
-      else if (err?.message) errorMsg = err.message;
-      else if (err?.status) errorMsg = `Error: Status ${err.status}`;
-      else errorMsg = JSON.stringify(err);
+      if (error && typeof error === 'object') {
+        const err = error as Record<string, unknown>;
+        if (typeof err.text === 'string') {
+          errorMsg = err.text;
+        } else if (typeof err.message === 'string') {
+          errorMsg = err.message;
+        } else if (typeof err.status === 'string' || typeof err.status === 'number') {
+          errorMsg = `Error: Status ${err.status}`;
+        } else {
+          try {
+            errorMsg = JSON.stringify(err);
+          } catch {
+            errorMsg = String(err);
+          }
+        }
+      } else if (typeof error === 'string') {
+        errorMsg = error;
+      }
       
       setStatusMessage(`${errorMsg}. Please try again or email directly.`);
     }
