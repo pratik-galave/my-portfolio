@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import aboutImg from "../../assets/about.png";
+import SOCIALS from "../../config/socials";
 
 export default function About() {
   useEffect(() => {
@@ -116,7 +117,7 @@ export default function About() {
             
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">Email</h4>
-              <p className="text-on-surface-variant text-sm wrap-break-word">pratikgalave7498@gmail.com</p>
+              <p className="text-on-surface-variant text-sm wrap-break-word">pratikgalave@outlook.com</p>
             </div>
             
             <div>
@@ -126,10 +127,10 @@ export default function About() {
             
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">College</h4>
-              <p className="text-on-surface-variant text-sm">Army Institute of Technology, Pune</p>
+              <p className="text-on-surface-variant text-sm">Army Institute of Technology, Pune<br /><span className="text-xs font-mono text-primary font-semibold">B.E. IT — CGPA: 8.42</span></p>
             </div>
 
-            <a href="/Pratik_Galave_Resume.pdf" download className="inline-flex items-center gap-3 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-on-primary transition-colors group">
+            <a href={SOCIALS.resume} download className="inline-flex items-center gap-3 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-on-primary transition-colors group">
               <span className="text-sm">Download Resume</span>
               <span className="bg-primary text-on-primary p-1 rounded group-hover:bg-on-primary group-hover:text-primary transition-colors">
                 <i className="fa-solid fa-download text-xs"></i>

@@ -96,7 +96,7 @@ export default function AchievementsContact() {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: 'pratikgalave7498@gmail.com',
+        to_email: 'pratikgalave@outlook.com',
       });
 
       console.log('✓ Email sent successfully:', response);
@@ -207,7 +207,7 @@ export default function AchievementsContact() {
               just<br />send it.
             </h2>
             <p className="font-label-code text-label-code text-on-primary/70 dark:text-on-surface-variant/70 max-w-sm mt-4">
-              Open for freelance opportunities, open-source collaborations, or just a chat about code. Email: <a href="mailto:pratikgalave7498@gmail.com" className="underline">pratikgalave7498@gmail.com</a>
+              Open for freelance opportunities, open-source collaborations, or just a chat about code. Email: <a href="mailto:pratikgalave@outlook.com" className="underline">pratikgalave@outlook.com</a>
             </p>
           </div>
 

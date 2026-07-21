@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../assets/image.png";
+import SOCIALS from "../config/socials";
 
 export default function Navbar() {
   const navLinkClass = "text-on-navbar font-medium hover:opacity-90 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm";
@@ -30,7 +31,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4 flex-shrink-0">
-          <a href="/Pratik_Galave_Resume.pdf" target="_blank" rel="noopener noreferrer" className={resumeBtnClass}>
+          <a href={SOCIALS.resume} target="_blank" rel="noopener noreferrer" className={resumeBtnClass}>
             Resume
           </a>
 
@@ -52,7 +53,7 @@ export default function Navbar() {
               <Link href="/#contact" className={navLinkClass}>
                 Experience & Contact
               </Link>
-              <a href="/Pratik_Galave_Resume.pdf" target="_blank" rel="noopener noreferrer" className="mt-2 px-4 py-2 bg-primary text-on-primary border border-primary hover:bg-surface hover:text-primary transition-all duration-200 text-center">
+              <a href={SOCIALS.resume} target="_blank" rel="noopener noreferrer" className="mt-2 px-4 py-2 bg-primary text-on-primary border border-primary hover:bg-surface hover:text-primary transition-all duration-200 text-center">
                 Resume
               </a>
             </div>
