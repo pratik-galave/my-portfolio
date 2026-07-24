@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import aboutImg from "../../assets/about.png";
 import SOCIALS from "../../config/socials";
 
@@ -59,7 +59,7 @@ export default function About() {
 
     return () => {
       wrap.removeEventListener('mousemove', handleMove);
-      wrap.removeEventListener('touchmove', handleTouch as any);
+      wrap.removeEventListener('touchmove', handleTouch as unknown as EventListener);
       wrap.removeEventListener('mouseleave', reset);
       cancelAnimationFrame(raf);
     };
@@ -71,23 +71,23 @@ export default function About() {
         <div className="text-center mb-16 relative">
           <h2 className="font-space text-4xl md:text-5xl font-black uppercase tracking-widest text-on-surface">About Me</h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 items-center">
           {/* Left Bio */}
           <div className="space-y-6 relative">
             <span className="hidden md:block absolute -top-6 -right-6 text-2xl text-on-surface-variant font-serif">+</span>
             <h3 className="text-2xl font-bold text-on-surface">Who am I?</h3>
 
-            <p className="text-on-surface-variant leading-relaxed text-sm">I'm a second-year engineering student who enjoys building software, learning new technologies, and turning ideas into real projects.</p>
+            <p className="text-on-surface-variant leading-relaxed text-sm">I&apos;m a third-year engineering student who enjoys building software, learning new technologies, and turning ideas into real projects.</p>
 
-            <p className="text-on-surface-variant leading-relaxed text-sm">Over time, I've discovered that programming is basically a conversation between me and my computer:</p>
+            <p className="text-on-surface-variant leading-relaxed text-sm">Over time, I&apos;ve discovered that programming is basically a conversation between me and my computer:</p>
 
-            <p className="text-on-surface-variant leading-relaxed text-sm"><em>Me:</em> "Do exactly what I want."<br /><em>Computer:</em> "I did exactly what you wrote."<br /><em>Me:</em> "That's the problem."</p>
+            <p className="text-on-surface-variant leading-relaxed text-sm"><em>Me:</em> &quot;Do exactly what I want.&quot;<br /><em>Computer:</em> &quot;I did exactly what you wrote.&quot;<br /><em>Me:</em> &quot;That&apos;s the problem.&quot;</p>
 
-            <p className="text-on-surface-variant leading-relaxed text-sm">When I'm not coding, you'll usually find me exploring new tools, working on projects, preparing for exams, or learning something new that seemed impossible a week ago.</p>
+            <p className="text-on-surface-variant leading-relaxed text-sm">When I&apos;m not coding, you&apos;ll usually find me exploring new tools, working on projects, preparing for exams, or learning something new that seemed impossible a week ago.</p>
 
-            <p className="text-on-surface-variant leading-relaxed text-sm">This portfolio is a collection of what I've built, what I've learned, and where I'm headed next. Feel free to explore—and if you find a bug, just know it's a premium hidden feature. 😄</p>
-            
+            <p className="text-on-surface-variant leading-relaxed text-sm">This portfolio is a collection of what I&apos;ve built, what I&apos;ve learned, and where I&apos;m headed next. Feel free to explore—and if you find a bug, just know it&apos;s a premium hidden feature. 😄</p>
+
           </div>
 
           {/* Center Image (Archway shape) */}
@@ -109,22 +109,22 @@ export default function About() {
           {/* Right Info Details */}
           <div className="space-y-8 text-center md:text-right relative">
             <span className="hidden md:block absolute -top-6 -left-6 text-2xl text-on-surface-variant font-serif">+</span>
-            
+
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">Name</h4>
               <p className="text-on-surface-variant text-sm">Pratik Galave</p>
             </div>
-            
+
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">Email</h4>
               <p className="text-on-surface-variant text-sm wrap-break-word">pratikgalave@outlook.com</p>
             </div>
-            
+
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">Location</h4>
               <p className="text-on-surface-variant text-sm">Pune, Maharashtra, India</p>
             </div>
-            
+
             <div>
               <h4 className="text-xl font-bold text-on-surface mb-1">College</h4>
               <p className="text-on-surface-variant text-sm">Army Institute of Technology, Pune<br /><span className="text-xs font-mono text-primary font-semibold">B.E. IT — CGPA: 8.42</span></p>

@@ -1,5 +1,4 @@
 import velocityImg from "@/assets/uberwebsite-dusky.vercel.app_.png";
-import codesyncImg from "@/assets/codesync-l3la.onrender.com_.png";
 import Image from "next/image";
 
 export default function ProjectsExperience() {
@@ -34,8 +33,8 @@ export default function ProjectsExperience() {
                 alt="Velocity - Ride Booking"
                 className="w-full h-full object-cover"
                 src={velocityImg}
-                width={(velocityImg as any).width || 1200}
-                height={(velocityImg as any).height || 640}
+                width={velocityImg.width}
+                height={velocityImg.height}
                 unoptimized
               />
             </div>
@@ -76,34 +75,36 @@ export default function ProjectsExperience() {
           <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
             <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden flex items-center justify-center p-6 bg-gradient-to-br from-surface-variant to-surface">
               <div className="text-center space-y-2">
-                <span className="material-symbols-outlined text-5xl text-primary">groups</span>
-                <h4 className="font-headline-md text-xl font-bold uppercase tracking-wider text-on-surface">DevConnect</h4>
-                <p className="text-xs font-mono text-on-surface-variant">Developer Social Platform</p>
+                <span className="material-symbols-outlined text-5xl text-primary">smart_toy</span>
+                <h4 className="font-headline-md text-xl font-bold uppercase tracking-wider text-on-surface">SmartDraft AI</h4>
+                <p className="text-xs font-mono text-on-surface-variant">AI Email Reply Assistant</p>
               </div>
             </div>
             <div className="p-stack-md flex flex-col h-full">
               <div className="flex justify-between items-start mb-stack-sm">
                 <div>
-                  <h3 className="font-headline-md text-[24px] font-bold">DevConnect</h3>
+                  <h3 className="font-headline-md text-[24px] font-bold">SmartDraft AI</h3>
                   <div className="flex gap-2 mt-2">
-                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">MERN</span>
-                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">JWT</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">FastAPI</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">Groq API</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">React</span>
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <a href="https://github.com/pratik-galave" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                  <a href="https://github.com/pratik-galave/smartdraft-ai.git" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
                     <span className="material-symbols-outlined text-[20px]">code</span>
                   </a>
                 </div>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
-                Full-stack developer networking platform allowing users to create profiles, share posts, and connect with developers. Features secure JWT authentication, protected routing, and MongoDB data management.
+                An LLM-powered email assistant using Groq API and FastAPI that classifies emails by intent and generates context-aware reply drafts. Integrated with Gmail API (OAuth 2.0) and a React dashboard featuring an LLM-as-a-judge review pipeline.
               </p>
               <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
-                <span className="px-2 py-1 border border-primary bg-surface-variant">React</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">Node.js</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">MongoDB</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">JWT</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">Python</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">FastAPI</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">Groq API</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">Gmail API</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">React.js</span>
               </div>
             </div>
           </article>
@@ -111,33 +112,39 @@ export default function ProjectsExperience() {
           <article className="pixel-border bg-surface-container-lowest overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
             <div className="h-64 bg-surface-variant border-b border-primary relative overflow-hidden flex items-center justify-center p-6 bg-gradient-to-br from-surface-variant to-surface">
               <div className="text-center space-y-2">
-                <span className="material-symbols-outlined text-5xl text-primary">task_alt</span>
-                <h4 className="font-headline-md text-xl font-bold uppercase tracking-wider text-on-surface">TaskFlow</h4>
-                <p className="text-xs font-mono text-on-surface-variant">Productivity & Task Platform</p>
+                <span className="material-symbols-outlined text-5xl text-primary">local_laundry_service</span>
+                <h4 className="font-headline-md text-xl font-bold uppercase tracking-wider text-on-surface">CampusLaundry</h4>
+                <p className="text-xs font-mono text-on-surface-variant">College Laundry Management System</p>
               </div>
             </div>
             <div className="p-stack-md flex flex-col h-full">
               <div className="flex justify-between items-start mb-stack-sm">
                 <div>
-                  <h3 className="font-headline-md text-[24px] font-bold">TaskFlow</h3>
+                  <h3 className="font-headline-md text-[24px] font-bold">CampusLaundry</h3>
                   <div className="flex gap-2 mt-2">
-                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">React</span>
-                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">REST APIs</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">MERN</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">MongoDB</span>
+                    <span className="px-2 py-1 bg-surface-variant border border-primary text-xs">JWT</span>
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <a href="https://github.com/pratik-galave" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                  <a href="https://campus-laundary.vercel.app/" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
+                    <span className="material-symbols-outlined text-[20px]">launch</span>
+                  </a>
+                  <a href="https://github.com/pratik-galave/CampusLaundary.git" target="_blank" rel="noreferrer" className="p-2 border border-primary hover:bg-primary hover:text-on-primary transition-colors">
                     <span className="material-symbols-outlined text-[20px]">code</span>
                   </a>
                 </div>
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant mb-stack-md grow">
-                Productivity and task management application with full CRUD operations, deadline tracking, and progress workflows. Built with clean component architecture and RESTful backend services.
+                A multi-role (Student, Staff, Supervisor) laundry management system with JWT authentication, registration-number login, 7-collection MongoDB schema, hostel-wise aggregation pipelines, issue reporting, and staff rating.
               </p>
               <div className="flex flex-wrap gap-2 font-label-code text-[12px]">
                 <span className="px-2 py-1 border border-primary bg-surface-variant">React.js</span>
                 <span className="px-2 py-1 border border-primary bg-surface-variant">Node.js</span>
-                <span className="px-2 py-1 border border-primary bg-surface-variant">REST APIs</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">Express.js</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">MongoDB</span>
+                <span className="px-2 py-1 border border-primary bg-surface-variant">JWT</span>
               </div>
             </div>
           </article>

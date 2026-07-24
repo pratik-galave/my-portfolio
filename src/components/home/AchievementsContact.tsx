@@ -15,17 +15,10 @@ export default function AchievementsContact() {
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     
-    console.log('EmailJS Config:', {
-      publicKey: publicKey ? publicKey.substring(0, 10) + '...' : 'MISSING',
-      serviceId: serviceId ? serviceId.substring(0, 10) + '...' : 'MISSING',
-      templateId: templateId ? templateId.substring(0, 10) + '...' : 'MISSING',
-    });
-    
     if (publicKey) {
       emailjs.init(publicKey);
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setInitialized(true);
-      console.log('✓ EmailJS initialized');
     } else {
       console.warn('❌ EmailJS public key not found in environment variables');
       setInitialized(false);

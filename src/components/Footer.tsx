@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SOCIALS } from "../config/socials";
 
 export default function Footer() {

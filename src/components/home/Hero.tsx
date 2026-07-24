@@ -52,8 +52,8 @@ export default function Hero() {
             src={heroImg}
             alt="Pratik Galave Portrait"
             className="object-cover object-bottom z-10 w-full h-full"
-            width={(heroImg as any).width}
-            height={(heroImg as any).height}
+            width={heroImg.width}
+            height={heroImg.height}
             quality={100}
             unoptimized
             priority
